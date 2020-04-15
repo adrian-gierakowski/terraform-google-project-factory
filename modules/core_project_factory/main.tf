@@ -157,8 +157,8 @@ data "null_data_source" "default_service_account" {
   Default compute service account deletion
  *****************************************/
 module "gcloud_delete" {
-  source  = "terraform-google-modules/gcloud/google"
-  version = "~> 0.5.0"
+  source  = "git@github.com:adrian-gierakowski/terraform-google-gcloud-lite.git?ref=0c75c9ef328f8fa8992f1f928c43cc394c6ff051"
+  # version = "~> 0.5.0"
 
   enabled                           = var.default_service_account == "delete"
   use_tf_google_credentials_env_var = var.use_tf_google_credentials_env_var
@@ -185,8 +185,8 @@ module "gcloud_delete" {
   Default compute service account deprivilege
  ********************************************/
 module "gcloud_deprivilege" {
-  source  = "terraform-google-modules/gcloud/google"
-  version = "~> 0.5.0"
+  source  = "git@github.com:adrian-gierakowski/terraform-google-gcloud-lite.git?ref=0c75c9ef328f8fa8992f1f928c43cc394c6ff051"
+  # version = "~> 0.5.0"
 
   enabled                           = var.default_service_account == "deprivilege"
   use_tf_google_credentials_env_var = var.use_tf_google_credentials_env_var
@@ -213,8 +213,8 @@ module "gcloud_deprivilege" {
   Default compute service account disable
  *****************************************/
 module "gcloud_disable" {
-  source  = "terraform-google-modules/gcloud/google"
-  version = "~> 0.5.0"
+  source  = "git@github.com:adrian-gierakowski/terraform-google-gcloud-lite.git?ref=0c75c9ef328f8fa8992f1f928c43cc394c6ff051"
+  # version = "~> 0.5.0"
 
   enabled                           = var.default_service_account == "disable"
   use_tf_google_credentials_env_var = var.use_tf_google_credentials_env_var
